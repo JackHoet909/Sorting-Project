@@ -1,0 +1,76 @@
+        System.out.println("*** TESTING CONSTRUCTOR ***");
+        DCircularLL list = new DCircularLL();
+        System.out.println("List should be []: " + list);
+
+        System.out.println("\n*** TESTING ADD ***");
+        list.add(12);
+        list.add(10);
+        System.out.println("The list should be [10 12]: " + list);
+
+        System.out.println("\n*** TESTING APPEND ***");
+        list.append(14);
+        System.out.println("The list should be [10 12 14]: " + list);
+
+        System.out.println("\n*** TESTING REMOVE(ITEM) ***");
+        list.remove(10);
+        System.out.println("The list should be [12 14]: " + list);
+
+        System.out.println("\n*** TESTING REMOVE ***");
+        list.remove();
+        System.out.println("The list should be [14]: " + list);
+
+        System.out.println("\n*** TESTING REMOVE(ITEM) on 1-item list ***");
+        list.remove(14);
+        System.out.println("The list should be []: " + list);
+        
+        System.out.println("\n*** TEST ADD on Empty LIST ***");
+        list.add(6);
+        System.out.println("The list should be [6]: " + list);
+        
+        System.out.println("\n*** REMOVING ONLY ELEMENT IN LIST ***");
+        list.remove();
+        System.out.println("The list should be []: " + list);
+        
+        System.out.println("\n*** TESTING APPEND TO EMPTY LIST ***");
+        list.append(50);
+        System.out.println("The list should be [50]: " + list);
+        
+        System.out.println("\n*** TESTING ADD AFTER REMOVE ***");
+        list.add(12);
+        list.add(8);
+        System.out.println("The list should be [8 12 50]: " + list);
+
+        System.out.println("\n*** TESTING INDEXOF ***");
+        System.out.println("The index of 8 should be 0: " + list.indexOf(8));
+        System.out.println("The index of 50 should be 2: " + list.indexOf(50));
+        System.out.println("The index of 9 should be -1: " + list.indexOf(9));
+
+        System.out.println("\n*** TESTING INDEXOF AFTER REMOVE ***");
+        list.remove(12);
+        System.out.println("The list should be [8 50]: " + list);
+        System.out.println("The index of 12 should be -1: " + list.indexOf(12));
+
+        System.out.println("\n*** TESTING EMPTY ***");
+        list.empty();
+        System.out.println("The list should be []: " + list);
+        System.out.println("The index of 8 should be -1: " + list.indexOf(8));
+
+        System.out.println("\n*** TESTING METHODS AFTER EMPTY ***");
+        list.add(6);
+        list.append(9);
+        list.add(4);
+        list.add(3);
+        list.add(2);
+        list.append(10);
+
+        System.out.println("The list should be [2 3 4 6 9 10]: " + list);
+        list.remove(2);
+        System.out.println("The list should be [3 4 6 9 10]: " + list);
+        list.remove(10);
+        System.out.println("The list should be [3 4 6 9]: " + list);
+
+        System.out.println("The index of 2 should be -1: " + list.indexOf(2));
+        System.out.println("The index of 10 should be -1: " + list.indexOf(10));
+        System.out.println("The index of 3 should be 0: " + list.indexOf(3));
+        System.out.println("The index of 9 should be 3: " + list.indexOf(9));
+        System.out.println("\n\n\n");
